@@ -52,7 +52,7 @@ void setup() {
   digitalWrite(0, HIGH); //Pull-Up aktivieren
   
   sbi(GIMSK,PCIE);   //Externen Interrupt (Wecker) aktivieren
-  sbi(PCMSK,PCINT0); //Wecker ist an Pin 0 (Schuettelsensor)
+  sbi(PCMSK,PCINT0); //"Wecker" (Schuettelsensor) ist an Interrupt Register 0
   sei();             //Wecker aktivieren
   system_sleep();    //Gute Nacht
   /* loop() wird vorerst nicht ausgefuehrt, da der ATtiny am Schlafen ist.
